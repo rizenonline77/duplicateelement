@@ -1,0 +1,11 @@
+import java.util.*;
+import java.util.stream.*;
+public class duplicateelement {
+    public static void main(String args[]) {
+            List<Integer> myList = Arrays.asList(10,16,10,49,27,94,32,16);
+            Set<Integer> set = new HashSet();
+            myList.stream()
+                  .filter(n -> !set.add(n))
+                  .forEach(System.out::println);
+    }
+}
